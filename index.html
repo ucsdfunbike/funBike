@@ -5,33 +5,36 @@
     <!--Allows for mobile viewing of webpages-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> UCSD Fun Bike </title>
-    <!--Google Maps API -->
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <!--Creates new map on the webpage -->
-    <script>
-      function initialize() {
-        //Initializes map
-        var mapProp = {
-          center:new google.maps.LatLng(40,0),
-          zoom:2,
-          mapTypeId:google.maps.MapTypeId.ROADMAP
-        };
-        //Creates new google map and places on the webpage
-        var map = new google.maps.Map(document.getElementById("map-canvas"),mapProp);
-      }
-      //Event Listener to load the map
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
     <!-- Linking the Bootstrap CSS to our HTML -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!--Google Maps API -->
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
   </head>
 
   <body>
     <!--Placeholder for the Google Maps -->
     <div class="container-fluid">
       <div id="map-canvas"></div>
-    </div>
+      <br/>
+      <center>
+        <div class="inline">
+          <button class="btn btn-default btn-large left-align"> START </button>
+          <button class="btn btn-default btn-large right-align"> END </button>
+        </div>
+        <br/>
+        <br/>
+        <!--Location of the distances and time-->
+        <div class="left-align">
+          DISTANCE: 
+          <p id="distance"> </p>
+          <br/>
+          TIME ELASPED: 
+          <p id="timer"> </p>
+        </div>
+      </div>
+    </center>
   </body>
 
 </html>
