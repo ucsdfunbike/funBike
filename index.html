@@ -4,33 +4,37 @@
     <meta charset="utf-8">
     <!--Allows for mobile viewing of webpages-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> UCSD Fun Bike </title>
     <!-- Linking the Bootstrap CSS to our HTML -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!--Customizing the Font -->
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
     <!--Google Maps API -->
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="js/map.js"></script>
+    <title> UCSD Fun Bike </title>
   </head>
 
   <body>
     <!--Placeholder for the Google Maps -->
-    <div class="container-fluid">
-      <div id="map-canvas"></div>
+    <div class = "span2 offset12 right-align">
+      <button class="btn-custom"> HIGH SCORE </button>
+    </div>
+    <br/>
+    <div id="map-canvas"></div>
+    <br/>
+    <center>
+      <div class="inline">
+        <button class="btn-large btn-custom left-align"> START </button>
+        <button class="btn-large btn-custom right-align"> END </button>
+      </div> 
       <br/>
-      <center>
-        <div class="inline">
-          <button class="btn btn-default btn-large left-align"> START </button>
-          <button class="btn btn-default btn-large right-align"> END </button>
-        </div>
-        <br/>
-        <br/>
-        <!--Location of the distances and time-->
-        <div class="left-align">
-          DISTANCE: 
+      <!--Location of the distances and time-->
+      <div class="container-color">
+        <div class ="span2 offset5 box">
+          <h4>DISTANCE: </h4>
           <p id="distance"> </p>
-          <br/>
-          TIME ELASPED: 
+          <h4>TIME ELASPED: </h4>
           <p id="timer"> </p>
         </div>
       </div>
