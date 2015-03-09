@@ -18,17 +18,15 @@
 
   <body>
     <!--Placeholder for the Google Maps -->
-    <div class = "span2 offset12 right-align">
-      <button class="btn-custom"> HIGH SCORE </button>
-    </div>
+ 
     <br/>
     <div class="container-fluid">
       <div id="map-canvas"></div>
       <br/>
       <center>
         <div class="inline">
-          <button class="btn-large btn-custom left-align"> START </button>
-          <button class="btn-large btn-custom right-align"> END </button>
+          <button class="btn-large btn-custom left-align" onclick="startStreeView()"> START </button>
+          <button class="btn-large btn-custom right-align" onclick="doEnd()"> END </button>
         </div> 
         <br/>
         <!--Location of the distances and time-->
@@ -37,6 +35,10 @@
             <p id="distance"> </p>
             <h4 class="txt-font">TIME ELASPED: </h4>
             <p id="timer"> </p>
+        </div>
+        <div class = "span2 offset12 right-align">
+        <button class="btn-custom"> HIGH SCORES </button>
+        <p id="scores"> </p>
         </div>
       </div>
     </center>
