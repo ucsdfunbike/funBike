@@ -9,8 +9,9 @@
     <link href="css/style.css" rel="stylesheet">
     <!--Customizing the Font -->
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <!--Google Maps API -->
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <script type="text/javascript" src="js/map.js"></script>
     <title> UCSD Fun Bike </title>
   </head>
@@ -21,21 +22,21 @@
       <button class="btn-custom"> HIGH SCORE </button>
     </div>
     <br/>
-    <div id="map-canvas"></div>
-    <br/>
-    <center>
-      <div class="inline">
-        <button class="btn-large btn-custom left-align"> START </button>
-        <button class="btn-large btn-custom right-align"> END </button>
-      </div> 
+    <div class="container-fluid">
+      <div id="map-canvas"></div>
       <br/>
-      <!--Location of the distances and time-->
-      <div class="container-color">
-        <div class ="span2 offset5 box">
-          <h4>DISTANCE: </h4>
-          <p id="distance"> </p>
-          <h4>TIME ELASPED: </h4>
-          <p id="timer"> </p>
+      <center>
+        <div class="inline">
+          <button class="btn-large btn-custom left-align"> START </button>
+          <button class="btn-large btn-custom right-align"> END </button>
+        </div> 
+        <br/>
+        <!--Location of the distances and time-->
+        <div class="container-color">
+            <h4 class="txt-font">DISTANCE: </h4>
+            <p id="distance"> </p>
+            <h4 class="txt-font">TIME ELASPED: </h4>
+            <p id="timer"> </p>
         </div>
       </div>
     </center>
