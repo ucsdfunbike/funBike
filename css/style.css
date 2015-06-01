@@ -1,3 +1,8 @@
+body {
+    margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    height: 100%;
+}
+
 #map-canvas {
 	margin: 0 auto;
 	margin-right: 0;
@@ -52,3 +57,103 @@
 	padding-top: 5px;
 
 }
+
+.about{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    text-align: center; 
+}
+
+/* About Page CSS */
+.header-image {
+    display: block;
+    text-align: center;
+    background: url('../img/heading.jpg') no-repeat center center fixed; 
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+}
+
+.headline {
+    padding: 120px 0;
+}
+
+.headline h1 {
+    font-size: 110px;
+    width:550px;
+    color:rgba(0,0,0,0.8);
+    text-shadow: 2px 2px rgba(255, 255, 255, .5);    
+    text-align: left;
+    font-family: 'Pacifico', cursive;
+    margin-left:-65px;
+    margin-top:150px;
+}
+
+.arrow{
+    margin-top:175px;
+}
+
+.headline h2 {
+    font-size: 50px;
+    color:black;
+    width:550px;
+    font-family: 'Arimo', sans-serif;
+    text-align: left;
+}
+
+.divider {
+    margin: 50px 0;
+}
+
+.feature {
+    overflow: hidden;
+    padding-top:5%;
+}
+
+.feature-image.pull-left {
+    margin-right: 40px;
+}
+
+.feature-image.pull-right {
+    margin-left: 40px;
+}
+
+.feature-heading {
+    margin-top:25px;
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+    margin-bottom:50px;
+    color:rgb(96,143,13);
+
+}
+
+.first{
+    margin-top:150px;
+    height:250px;
+}
+
+.featuretext{
+    line-height:1.6;
+}
+
+.secondsectionimages{
+    display: block;
+    width:500px;
+}
+
+.thirdsectiontext{
+    width:500px;
+}
+
+.thirdimage{
+    width:500px;
+}
+
+
+footer {
+    margin: 50px 0;
+}
+
+
