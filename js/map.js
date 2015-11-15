@@ -75,6 +75,12 @@ function doEnd() {
     alert("You biked " + stepsTaken + " steps in " + time +" seconds!");
 }
 function findSlot(steps) {
+    //first check if any high scores haven't been set yet
+    if(docCookies.getItem(("ucsdhighscore5") == null) return "ucsdhighscore5";
+    else if(docCookies.getItem("ucsdhighscore4") == null) return "ucsdhighscore4";
+    else if(docCookies.getItem("ucsdhighscore3") == null) return "ucsdhighscore3";
+    else if(docCookies.getItem("ucsdhighscore2") == null) return "ucsdhighscore2";
+    else if(docCookies.getItem("ucsdhighscore1") == null) return "ucsdhighscore1";
     
     //Check to see if score is higher than those already logged
     if(steps > "ucsdhighscore5") return "ucsdhighscore5";
@@ -82,13 +88,6 @@ function findSlot(steps) {
     else if(steps > "ucsdhighscore3") return "ucsdhighscore3";
     else if(steps > "ucsdhighscore2") return "ucsdhighscore2";
     else if(steps > "ucsdhighscore1") return "ucsdhighscore1";
-
-    //first check if any high scores haven't been set yet
-    if(docCookies.getItem(("ucsdhighscore5") == null) return "ucsdhighscore5";
-    else if(docCookies.getItem("ucsdhighscore4") == null) return "ucsdhighscore4";
-    else if(docCookies.getItem("ucsdhighscore3") == null) return "ucsdhighscore3";
-    else if(docCookies.getItem("ucsdhighscore2") == null) return "ucsdhighscore2";
-    else if(docCookies.getItem("ucsdhighscore1") == null) return "ucsdhighscore1";
 }
 function getLowScore() {
     if(docCookies.getItem("ucsdhighscore5") != null) return parseInt(docCookies.getItem("ucsdhighscore5"));
