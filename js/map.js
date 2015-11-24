@@ -70,34 +70,31 @@ function startStreeView() {
 function doEnd() {
     if(stepsTaken > getLowScore()) {
         var name = prompt("You got a high score! What is your name?");
-        docCookies.setItem(findSlot(stepsTaken), stepsTaken+":"+name);
+        docCookies.setItem(findSlot(stepsTaken), stepsTaken + ":" + name);
     }
-    alert("you biked " + stepsTaken + " steps in " + time+" seconds!");
-    
+    alert("You biked " + stepsTaken + " steps in " + time + " seconds!");
 }
 function findSlot(steps) {
     //first check if any high scores haven't been set yet
-    if(docCookies.getItem("ucsdhighscore1") == null) return "ucsdhighscore1";
-    if(docCookies.getItem("ucsdhighscore2") == null) return "ucsdhighscore2";
-    if(docCookies.getItem("ucsdhighscore3") == null) return "ucsdhighscore3";
-    if(docCookies.getItem("ucsdhighscore4") == null) return "ucsdhighscore4";
     if(docCookies.getItem("ucsdhighscore5") == null) return "ucsdhighscore5";
+    else if(docCookies.getItem("ucsdhighscore4") == null) return "ucsdhighscore4";
+    else if(docCookies.getItem("ucsdhighscore3") == null) return "ucsdhighscore3";
+    else if(docCookies.getItem("ucsdhighscore2") == null) return "ucsdhighscore2";
+    else if(docCookies.getItem("ucsdhighscore1") == null) return "ucsdhighscore1";
     
     //then find where to put the high score
-    if(steps > "ucsdhighscore1") return "ucsdhighschore1";
-    if(steps > "ucsdhighscore2") return "ucsdhighschore2";
-    if(steps > "ucsdhighscore3") return "ucsdhighschore3";
-    if(steps > "ucsdhighscore4") return "ucsdhighschore4";
-    if(steps > "ucsdhighscore5") return "ucsdhighschore5";
-
-
+    if(steps > "ucsdhighscore5") return "ucsdhighscore5";
+    else if(steps > "ucsdhighscore4") return "ucsdhighscore4";
+    else if(steps > "ucsdhighscore3") return "ucsdhighscore3";
+    else if(steps > "ucsdhighscore2") return "ucsdhighscore2";
+    else if(steps > "ucsdhighscore1") return "ucsdhighscore1";
 }
 function getLowScore() {
     if(docCookies.getItem("ucsdhighscore5") != null) return parseInt(docCookies.getItem("ucsdhighscore5"));
-    if(docCookies.getItem("ucsdhighscore4") != null) return parseInt(docCookies.getItem("ucsdhighscore4"));
-    if(docCookies.getItem("ucsdhighscore3") != null) return parseInt(docCookies.getItem("ucsdhighscore3"));
-    if(docCookies.getItem("ucsdhighscore2") != null) return parseInt(docCookies.getItem("ucsdhighscore2"));
-    if(docCookies.getItem("ucsdhighscore1") != null) return parseInt(docCookies.getItem("ucsdhighscore1"));
+    else if(docCookies.getItem("ucsdhighscore4") != null) return parseInt(docCookies.getItem("ucsdhighscore4"));
+    else if(docCookies.getItem("ucsdhighscore3") != null) return parseInt(docCookies.getItem("ucsdhighscore3"));
+    else if(docCookies.getItem("ucsdhighscore2") != null) return parseInt(docCookies.getItem("ucsdhighscore2"));
+    else if(docCookies.getItem("ucsdhighscore1") != null) return parseInt(docCookies.getItem("ucsdhighscore1"));
     return 0;
 }
 function setMarker(markerToSet) {
@@ -199,4 +196,3 @@ google.maps.event.addDomListener(window, "resize", function resizeMap() {
   google.maps.event.trigger(map, "resize");
   map.setCenter(center); 
 });
-
