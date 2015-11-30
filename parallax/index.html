@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Bike Tutorial</title>
+       <link rel="stylesheet" href="css/style.css"/>
+	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	   <!-- NEW FONTS -->
+	   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	<script>
+	//JQUERY FOR SLIDING NAVIGATION   
+	$(document).ready(function() {
+	  $('a[href*=#]').each(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+	    && location.hostname == this.hostname
+	    && this.hash.replace(/#/,'') ) {
+	      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+	      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+	       if ($target) {
+	         var targetOffset = $target.offset().top;
+
+	//JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV
+	         $(this).click(function() {
+	            $("#nav li a").removeClass("active");
+	            $(this).addClass('active');
+	           $('html, body').animate({scrollTop: targetOffset}, 1000);
+	           return false;
+	         });
+	      }
+	    }
+	  });
+
+	});
+
+
+	</script>
+
+
+ </head> 
+	
+<body>
+
+<!--LINK BACK TO THE TUTORIAL 
+<div id="demo_back">
+<a href="#" class="lpanel"> << BACK TO THE 1STWEBDESIGN ARTICLE </a>
+<a href="#" class="rpanel"> NEXT DEMO >> </a>
+</div>
+-->
+
+<!-- HEADER START-->   
+<!--<header id="header">
+<div class="content">
+<div id="logo"><a href=""> Bike Tutorial </a></div>
+
+<nav id="nav">
+	<ul>
+		<li><a href="#slide1" class="active" title="Next Section" >Safety Checks</a></li>
+		<li><a href="#slide2" title="Next Section"> How to Bike </a></li>
+		<li><a href="#slide3" title="Next Section"> </a></li> -->
+		<!--<li><a  href="#slide4" title="Next Section"> Planned Activities</a></li>
+		<li><a href="#slide5" title="Next Section">Interests </a></li>
+	</ul>
+</nav>
+</div>
+</header>	-->
+<!-- HEADER END -->   
+
+<!-- SLIDES START -->   	
+	<div id="slide1">
+		<div class="content">
+            <h2>Fun Bike </h2>
+		    <h1> Let's Begin </h1>
+		    <div id="divider"> </div>
+		     <h3> About the Bike </h3>
+           <div id="ribbon"></div>
+	       <div id="new_year"> </div>
+		</div> 
+    </div> 
+
+	<div id="slide2">
+		<div class="content" >
+            <div class="quotes_container quotes">
+		    <h2>Parts of the Bike<br/>  </h2>
+		    <div id="divider"> </div>
+			<h3>
+				<b>Handlebars ------ </b> Use this to help you have something to grab onto to go faster or if you're tired, to lean onto to rest <br/>
+				<b>Brakes ------ </b> Located under the seat, in the middle of the bike, press the lever to slow down<br/>
+				<b>Pedals ------ </b> Located right under the seat, attached onto two metal bars, use these to start moving on the bike <br/>
+				<b>Seat ------ </b>Located on the top back part of the bike, sit here and start pedaling! <br/>
+				<b>Buttons ------ </b> Located on the handlebars, right or left to turn in the game! 
+			</h3>
+		  <!--<img src="img/dr-seuss.png" align="left"/> <h4 class="author_name_gray">Dr. Seuss </h4>-->
+		</div> 
+		</div> 
+    </div> 
+	
+	
+   <div id="slide3">
+		<div class="content">
+			   <div class="quotes_container">
+		       <h3 class="quotes">Before getting onto the bike, make sure the seat’s height is the same height as your hip.</h3>
+		     <!-- <img src="img/norman.png" align="left"/> <h4 class="author_name_white">Norman Vincent Peale </h4>-->
+		    </div> 
+		</div> 
+    </div> 
+	
+	
+	<div id="slide4">
+		<div class="content">
+            <div class="quotes_container quotes">
+		    <h2>How to operate the bike:<br/>  </h2>
+		    <div id="divider"> </div>
+			<h3 >
+				<ul align="left">
+					<li>
+						Please do not jump off the bike while in motion, as you can hurt yourself, or the people around you
+					</li>
+
+					<li>
+					To get on safely to the bike: 
+						<ol>
+							<li>
+						 	Place one foot on the pedal, and then use that to step onto and sit onto the seat. 
+						 	</li>
+						 	<li>
+						 	Once you are on the bike, you can then place your other foot into the other pedal. Make sure your feet are strapped in or snug in the pedals so that you can get as much traction as possible.
+							</li>
+							<li>
+						    Pedal for a bit on the bike, and raise the difficulty of friction accordingly using the black knob on the bike.
+							</li>
+						</ol>
+					</li>
+					<li>
+					Getting off the bike safely: 
+						<ol>
+					 		<li> make sure you have fully stopped. </li> 
+					 		<li> Unstrap or take your feet off the bike.</li>
+					 		<li> Use one of your legs to carefully get off the bike on one side. </li>
+					 	</ol>
+					</li>
+				</ul>	
+			</h3>
+		  <!--<img src="img/dr-seuss.png" align="left"/> <h4 class="author_name_gray">Dr. Seuss </h4>-->
+		</div> 
+		</div> 
+    </div> 
+
+	<div id="slide5">
+		<div class="content">
+           <div class="quotes_container">
+		    <h3 class="quotes" align="center">  </h3>
+		  </div> 
+		</div> 
+    </div> 
+	<div id="slide6">
+		<div class="content">
+		<div class="quotes_container quotes">
+		    <h2>How to Play:<br/>  </h2>
+		    <div id="divider"> </div>
+			<h3 >
+				<ul align="left">
+					<li>
+						Setting up the Map: 
+						<ol>
+							<li>
+						 		Click on one of the currently six location check map points on Google Maps.
+						 	</li>
+						 	<li>
+						 		Once you click on one of the red flags, press start and you will be instantly taken to that point of the map.
+							</li>
+							<li>
+						    	Get onto the bike, and from there you can start pedaling and go on your wild adventure! 
+							</li>
+						</ol>
+					</li>
+				</ul>	
+			</h3>
+		  <!--<img src="img/dr-seuss.png" align="left"/> <h4 class="author_name_gray">Dr. Seuss </h4>-->
+		</div> 
+		</div> 
+		
+
+    </div> 
+	
+	<div id="slide7">
+		<div class="content">
+           <div class="quotes_container">
+		   	<a href="../index.html"> 
+		   		<h3 class="quotes" align="center"> Learn More </h3>
+		   	</a>
+		  </div> 
+		<div id="copyright"><a href="http://www.1stwebdesigner.com/">Copyright 1stwebdesigner.com </a></div>  
+		</div> 
+		
+
+    </div> 
+	
+<!-- SLIDES END -->
+
+</body>
+</html>
