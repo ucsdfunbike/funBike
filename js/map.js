@@ -70,12 +70,20 @@ function startStreeView() {
 });
     startTime = date.getTime();
 }
+
+// After Biker Finishes
 function doEnd() {
     if(stepsTaken > getLowScore()) {
         var name = prompt("You got a high score! What is your name?");
         docCookies.setItem(findSlot(stepsTaken), stepsTaken + ":" + name);
     }
     alert("You biked " + stepsTaken + " steps in " + time + " seconds!");
+
+    // Reset the Map
+    //map.setMapTypeId(MAP_TYPE_ID);
+    //map.setCenter(new google.maps.LatLng(40,-100));
+    //map.setZoom(4);
+    initialize(); 
 }
 function findSlot(steps) {
     //first check if any high scores haven't been set yet
@@ -148,13 +156,13 @@ function initialize() {
   map = new google.maps.Map(document.getElementById("map-canvas"),mapProp);
 
 /* Popup Instructions on the Map */
-  var step1 = '<h3> Click a marker </h3>';
+  var step1 = ' <h1> Click a marker </h1>';
   //Create infoWindow
   var info1 = new google.maps.InfoWindow({
     content: step1
   });
 
-  var step2 = '<h3> Click Start </h3>'; 
+  var step2 = '<h1> Click Start </h1>'; 
   var info2 = new google.maps.InfoWindow({
     content: step2
   });
