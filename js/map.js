@@ -1,5 +1,6 @@
-//cookie library
+/**** Handles all the Map Activities *****/
 
+//cookie library
 var docCookies = {
 getItem: function (sKey) {
     if (!sKey) { return null; }
@@ -40,6 +41,7 @@ keys: function () {
 }
 };
 
+
 //Creates map
 var map;
 var curMarker;
@@ -55,6 +57,7 @@ var sf;
 var vegas;
 var esb;
 var wm;
+
 
 function startStreeView() {
     panoramaOptions = {position : curMarker.position};
@@ -140,54 +143,73 @@ function initialize() {
     zoom:4//,
     //mapTypeId:google.maps.MapTypeId.ROADMAP
   };
+
   //Creates new google map and places on the webpage
   map = new google.maps.Map(document.getElementById("map-canvas"),mapProp);
-    
+
+/* Popup Instructions on the Map */
+  var step1 = '<h3> Click a marker </h3>';
+  //Create infoWindow
+  var info1 = new google.maps.InfoWindow({
+    content: step1
+  });
+
+  var step2 = '<h3> Click Start </h3>'; 
+  var info2 = new google.maps.InfoWindow({
+    content: step2
+  });
+
   marker = new google.maps.Marker({
-                                        position: new google.maps.LatLng(32.876986, -117.238348),
-                                        map: map,
-                                        title: 'UCSD'
-                                        });
-    google.maps.event.addListener(marker, 'click', function(){curMarker=marker;});
-    
+                                position: new google.maps.LatLng(32.876986, -117.238348),
+                                map: map,
+                                title: 'UCSD'
+                                });
+    google.maps.event.addListener(marker, 'click', function(){
+                                                            curMarker=marker;
+                                                            // Close the first window.
+                                                            info1.close(); 
+                                                            // Add popup to map
+                                                            info2.open(map, marker); 
+                                                            });
+    //Setting the InfoWindow to open on default at page load
+    info1.open(map, marker); 
+        
     seattle = new google.maps.Marker({
                                     position: new google.maps.LatLng(47.619871, -122.348684),
                                     map: map,
                                     title: 'The Space Needle'
                                     });
     google.maps.event.addListener(seattle, 'click', function(){curMarker=seattle;});
-    
+        
     sf = new google.maps.Marker({
-                                     position: new google.maps.LatLng(37.809428, -122.477201),
-                                     map: map,
-                                     title: 'The Golden Gate Bridge'
-                                     });
-    google.maps.event.addListener(sf, 'click', function(){curMarker=sf;});
-    
-    vegas = new google.maps.Marker({
-                                position: new google.maps.LatLng(36.114797, -115.172711),
+                                position: new google.maps.LatLng(37.809428, -122.477201),
                                 map: map,
-                                title: 'Las Vegas'
-                                });
+                                title: 'The Golden Gate Bridge'
+                                    });
+    google.maps.event.addListener(sf, 'click', function(){curMarker=sf;});
+        
+    vegas = new google.maps.Marker({
+                                    position: new google.maps.LatLng(36.114797, -115.172711),
+                                    map: map,
+                                    title: 'Las Vegas'
+                                    });
     google.maps.event.addListener(vegas, 'click', function(){curMarker=vegas;});
-    
+        
     esb = new google.maps.Marker({
-                                 position: new google.maps.LatLng(40.748458, -73.984489),
-                                   map: map,
-                                   title: 'The Empire State Building'
-                                   });
+                                position: new google.maps.LatLng(40.748458, -73.984489),
+                                     map: map,
+                                     title: 'The Empire State Building'
+                                     });
     google.maps.event.addListener(esb, 'click', function(){curMarker=esb;});
-    
+        
     wm = new google.maps.Marker({
-                                position: new google.maps.LatLng(38.888903, -77.032995
-),
-                                 map: map,
-                                 title: 'The Washington Monument'
-                                 });
+                                position: new google.maps.LatLng(38.888903, -77.032995),
+                                map: map,
+                                title: 'The Washington Monument'
+                                });
     google.maps.event.addListener(wm, 'click', function(){curMarker=wm;});
 
-    }
-
+}
 //Event Listener to load the map
 google.maps.event.addDomListener(window, 'load', initialize);
 //Resize the Map with browser window size

@@ -18,7 +18,9 @@ h1 {
 	font-weight:normal;
 	font-size: 55px;
 	text-align: center;
-	color: #fff;
+	color: #3fb0ac;
+	text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 2px white;
+
 	margin: 0;
 	padding: 0;
 }
@@ -28,7 +30,8 @@ h2 {
    font-weight: normal;
    font-size: 40px;
    text-align: center;
-   color: #fff;
+   color:#3fb0ac;
+   text-shadow: -1.7px 0 white, 0 1.7px white, 1.7px 0 white, 0 -1.7px white;
    margin: 0;
 	padding: 0;
 }
@@ -36,8 +39,36 @@ h2 {
 h3 {
    font-family: Oswald;
    font-weight: normal;
-   font-size: 20px;
-   text-align: center;
+   font-size: 24px;
+   text-align: left;
+   color: #F4410F;
+   text-shadow: -1.0px 0 white, 0 1.0px white, 1.0px 0 white, 0 -1.0px white;
+   margin: 5px 0;
+	padding: 0;
+	z-index: 1;
+	position: relative;
+}
+
+h4 {
+   font-family: Oswald;
+   font-weight: normal;
+   font-size: 16px;
+   text-align: left;
+   color: #3fb0ac;
+   text-shadow: -1.0px 0 white, 0 1.0px white, 1.0px 0 white, 0 -1.0px white;
+   margin: 5px 0;
+	padding: 0;
+	z-index: 1;
+	position: relative;
+}
+
+h5 {
+   font-family: Oswald;
+   font-weight: normal;
+   font-size: 24px;
+   text-align: left;
+   color: #3fb0ac;
+   text-shadow: -1.0px 0 white, 0 1.0px white, 1.0px 0 white, 0 -1.0px white;
    margin: 5px 0;
 	padding: 0;
 	z-index: 1;
@@ -91,14 +122,14 @@ a.rpanel:hover{ color: #fff; }
 .quotes {   
  font-family: 'Goudy Bookletter 1911', serif;
    font-weight: normal;
-   font-size: 30px;
-  text-align: left;
+   font-size: 100px;
+  text-align: center;
   margin: 50px auto;
 }
    
- .author_name_white { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #fff; font-size: 20px; }  
+ .author_name_#3fb0ac { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #fff; font-size: 20px; }  
  .author_name_gray { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #94a4a4; font-size: 20px; }  
- .quotes_container { width: 800px; margin: 0 auto; }
+ .quotes_container { width: 1000px; margin: 0 auto; }
 #christmas_tree { background: url('../img/christmas-tree.png')no-repeat; width: 48px; height: 77px; margin: 0 auto; position: relative; bottom: -35px;}
 #divider { background: url('../img/divider.png')no-repeat; width: 300px; height: 35px; margin: 0px auto 27px auto; }
 #ribbon { background: url('../img/ribbon.png')no-repeat; width: 251px; height: 48px; margin: 0 auto;  display: block; position: relative; top: -38px; }
@@ -135,7 +166,7 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 
 #slide1, #slide2{ width: 100%; }
 #slide1{
-	background:url('../img/bike.jpg') 50% 0 no-repeat fixed;
+	background:url('../img/sandiego-map.png') 50% 0 no-repeat fixed;
 	color: #fff;
 	height: 600px;
 	margin: 0;
@@ -144,16 +175,16 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 }
 
 #slide2{
-	background-color: #FDE3A7;
+	background-color: #fae596;
 	color: #333333;
-	height: 300px;
+	height: 950px;
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 200px 0;
+	padding: 50px 0px;
 }
 
 #slide3{
-	background: url('../img/biker.jpg') 50% 0 no-repeat fixed;
+	background: url('../img/adjustseat.png') 10% 0 no-repeat fixed;
 	color: #fff;
 	height: 600px;
 	padding: 170px 0 0 0;	
@@ -161,10 +192,10 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 }
 
 #slide4{
-	background-color: #FDE3A7;
+	background-color:#fae596;
 	color: #333333;
-	height: 300px;
-	padding: 200px 0;
+	height: 700px;
+	padding: 100px ;
 }
 
 #slide5{
@@ -176,14 +207,30 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 }
 
 #slide6{
-	background-color: #FDE3A7;
+	background-color: #fae596 ;
 	color: #333333;
 	height: 300px;
-	padding: 200px 0;
+	padding: 100px 0;
 }
 
 #slide7{
 	background: url('../img/working.jpg') 50% 0 no-repeat fixed;
+	height: 200px;
+	margin: 0 auto;
+	padding: 250px 0;
+	color: #fff;
+	background-size: cover;
+}
+
+#seatAdjustSlide{
+	background-color: #fae596;
+	color: #333333;
+	height: 700px;
+	padding: 100px;
+}
+
+#photoSlide{
+	background: url('../img/streetview.gif')50% 0 no-repeat fixed;
 	height: 200px;
 	margin: 0 auto;
 	padding: 250px 0;
@@ -199,5 +246,3 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 
 #copyright  { color: #fff; font-family:"Wellfleet";  font-size: 14px; margin-top: 100px; text-align: center;  }
 #copyright  a { text-decoration: none; color: #fff;  }
-
-
